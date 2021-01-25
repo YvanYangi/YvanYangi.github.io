@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务器端部署 | YangYangYang &#39;s Blog</title>
+    <meta name="description" content="个人博客">
+    <link rel="shortcut icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/styles.f683b4c6.css" as="style"><link rel="preload" href="/assets/js/app.f683b4c6.js" as="script"><link rel="preload" href="/assets/css/4.styles.50c27472.css" as="style"><link rel="preload" href="/assets/js/4.50c27472.js" as="script"><link rel="preload" href="/assets/css/0.styles.7d54da41.css" as="style"><link rel="preload" href="/assets/js/0.7d54da41.js" as="script"><link rel="preload" href="/assets/js/27.025b8a9c.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.82242ae5.css"><link rel="prefetch" href="/assets/css/12.styles.ac239c1a.css"><link rel="prefetch" href="/assets/css/13.styles.6d0d72ac.css"><link rel="prefetch" href="/assets/css/15.styles.a9d02288.css"><link rel="prefetch" href="/assets/css/16.styles.14f65a8d.css"><link rel="prefetch" href="/assets/css/17.styles.26c50035.css"><link rel="prefetch" href="/assets/css/18.styles.b0e60722.css"><link rel="prefetch" href="/assets/css/19.styles.8a06eb8d.css"><link rel="prefetch" href="/assets/css/2.styles.4691f751.css"><link rel="prefetch" href="/assets/css/20.styles.d5f5821a.css"><link rel="prefetch" href="/assets/css/21.styles.2c32c5a9.css"><link rel="prefetch" href="/assets/css/22.styles.dd37a877.css"><link rel="prefetch" href="/assets/css/23.styles.9c6e3f19.css"><link rel="prefetch" href="/assets/css/24.styles.ba0b5736.css"><link rel="prefetch" href="/assets/css/5.styles.eb0cf3ec.css"><link rel="prefetch" href="/assets/css/6.styles.3f72f639.css"><link rel="prefetch" href="/assets/css/7.styles.51367826.css"><link rel="prefetch" href="/assets/css/8.styles.df4e69a3.css"><link rel="prefetch" href="/assets/css/9.styles.13a61a09.css"><link rel="prefetch" href="/assets/js/10.82242ae5.js"><link rel="prefetch" href="/assets/js/11.31341d39.js"><link rel="prefetch" href="/assets/js/12.ac239c1a.js"><link rel="prefetch" href="/assets/js/13.6d0d72ac.js"><link rel="prefetch" href="/assets/js/14.77f430c4.js"><link rel="prefetch" href="/assets/js/15.a9d02288.js"><link rel="prefetch" href="/assets/js/16.14f65a8d.js"><link rel="prefetch" href="/assets/js/17.26c50035.js"><link rel="prefetch" href="/assets/js/18.b0e60722.js"><link rel="prefetch" href="/assets/js/19.8a06eb8d.js"><link rel="prefetch" href="/assets/js/20.d5f5821a.js"><link rel="prefetch" href="/assets/js/21.2c32c5a9.js"><link rel="prefetch" href="/assets/js/22.dd37a877.js"><link rel="prefetch" href="/assets/js/23.9c6e3f19.js"><link rel="prefetch" href="/assets/js/24.ba0b5736.js"><link rel="prefetch" href="/assets/js/25.cce36918.js"><link rel="prefetch" href="/assets/js/26.8dead230.js"><link rel="prefetch" href="/assets/js/28.a2f04a72.js"><link rel="prefetch" href="/assets/js/29.36146808.js"><link rel="prefetch" href="/assets/js/30.9957db65.js"><link rel="prefetch" href="/assets/js/31.715a3053.js"><link rel="prefetch" href="/assets/js/32.133e49b5.js"><link rel="prefetch" href="/assets/js/33.adbd0b7b.js"><link rel="prefetch" href="/assets/js/34.8d6b989b.js"><link rel="prefetch" href="/assets/js/35.fe1e59eb.js"><link rel="prefetch" href="/assets/js/36.e3b4d1e2.js"><link rel="prefetch" href="/assets/js/37.d03b8ffc.js"><link rel="prefetch" href="/assets/js/38.114a0cc8.js"><link rel="prefetch" href="/assets/js/39.7c3619fd.js"><link rel="prefetch" href="/assets/js/5.eb0cf3ec.js"><link rel="prefetch" href="/assets/js/6.3f72f639.js"><link rel="prefetch" href="/assets/js/7.51367826.js"><link rel="prefetch" href="/assets/js/8.df4e69a3.js"><link rel="prefetch" href="/assets/js/9.13a61a09.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4691f751.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.45d55d38.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7d54da41.css"><link rel="stylesheet" href="/assets/css/10.styles.82242ae5.css"><link rel="stylesheet" href="/assets/css/12.styles.ac239c1a.css"><link rel="stylesheet" href="/assets/css/13.styles.6d0d72ac.css"><link rel="stylesheet" href="/assets/css/15.styles.a9d02288.css"><link rel="stylesheet" href="/assets/css/16.styles.14f65a8d.css"><link rel="stylesheet" href="/assets/css/17.styles.26c50035.css"><link rel="stylesheet" href="/assets/css/18.styles.b0e60722.css"><link rel="stylesheet" href="/assets/css/19.styles.8a06eb8d.css"><link rel="stylesheet" href="/assets/css/2.styles.4691f751.css"><link rel="stylesheet" href="/assets/css/20.styles.d5f5821a.css"><link rel="stylesheet" href="/assets/css/21.styles.2c32c5a9.css"><link rel="stylesheet" href="/assets/css/22.styles.dd37a877.css"><link rel="stylesheet" href="/assets/css/23.styles.9c6e3f19.css"><link rel="stylesheet" href="/assets/css/24.styles.ba0b5736.css"><link rel="stylesheet" href="/assets/css/4.styles.50c27472.css"><link rel="stylesheet" href="/assets/css/5.styles.eb0cf3ec.css"><link rel="stylesheet" href="/assets/css/6.styles.3f72f639.css"><link rel="stylesheet" href="/assets/css/7.styles.51367826.css"><link rel="stylesheet" href="/assets/css/8.styles.df4e69a3.css"><link rel="stylesheet" href="/assets/css/9.styles.13a61a09.css"><link rel="stylesheet" href="/assets/css/styles.f683b4c6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">YangYangYang 's Blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/home/home.html" class="sidebar-link">主页</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaGuide</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>开发</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>版本控制</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>服务器</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/deploy/server-deploy.html" class="active sidebar-link">服务器端部署</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content default"><h1 id="服务器端部署"><a href="#服务器端部署" aria-hidden="true" class="header-anchor">#</a> 服务器端部署</h1> <hr> <h3 id="centos7-3安装jdk1-8"><a href="#centos7-3安装jdk1-8" aria-hidden="true" class="header-anchor">#</a> centos7.3安装jdk1.8</h3> <ol><li><p>如果有openjdk先卸载</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ java -version
+</code></pre></div><p>1.1 查看已有openjdk文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ rpm -qa <span class="token operator">|</span> <span class="token function">grep</span> java
+</code></pre></div><p>1.2 删除相关openjdk文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ rpm -e --nodeps
+</code></pre></div><p>eg:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ rpm -e --nodeps java-1.7.0-openjdk-1.7.0.111-2.6.7.8.el7.x86_64
+$ rpm -e --nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64
+$ rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64
+$ rpm -e --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.8.el7.x86_64
+</code></pre></div></li> <li><p>下载jdk</p> <p><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener noreferrer">官网下载地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>解压</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">tar</span> -zxvf xxx.tar.gz
+</code></pre></div></li> <li><p>配置环境变量</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ vim /etc/profile
+</code></pre></div><p>在末尾加入</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#set java env</span>
+<span class="token function">export</span> JAVA_HOME<span class="token operator">=</span>/home/jdk1.8.0_221
+<span class="token function">export</span> CLASSPATH<span class="token operator">=</span>.:<span class="token variable">$JAVA_HOME</span>/jre/lib/rt.jar:<span class="token variable">$JAVA_HOME</span>/lib/dt.jar:<span class="token variable">$JAVA_HOME</span>/lib/tools.jar
+<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$JAVA_HOME</span>/bin:<span class="token variable">$PATH</span>
+</code></pre></div><p>修改完profile文件，执行生效命令</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">source</span> /ect/profile
+</code></pre></div></li> <li><p>验证安装成功</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ java -version
+java version <span class="token string">&quot;1.8.0_221&quot;</span>
+Java<span class="token punctuation">(</span>TM<span class="token punctuation">)</span> SE Runtime Environment <span class="token punctuation">(</span>build 1.8.0_221-b11<span class="token punctuation">)</span>
+Java HotSpot<span class="token punctuation">(</span>TM<span class="token punctuation">)</span> 64-Bit Server VM <span class="token punctuation">(</span>build 25.221-b11, mixed mode<span class="token punctuation">)</span>
+</code></pre></div></li></ol> <hr> <h3 id="centos7-3安装mysql"><a href="#centos7-3安装mysql" aria-hidden="true" class="header-anchor">#</a> centos7.3安装mysql</h3> <ol><li><p>获取官方yum源</p> <p><a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener noreferrer">官网yum源地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>下载</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">wget</span> https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+</code></pre></div></li> <li><p>安装源</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ yum -y localinstall mysql57-community-release-el7-11.noarch.rpm
+</code></pre></div></li> <li><p>在线安装Mysql</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ yum -y <span class="token function">install</span> mysql-community-server
+</code></pre></div></li> <li><p>启动mysql</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ systemctl start mysqld
+</code></pre></div></li></ol> <hr> <h3 id="mysql配置相关"><a href="#mysql配置相关" aria-hidden="true" class="header-anchor">#</a> mysql配置相关</h3> <h4 id="设置开机启动"><a href="#设置开机启动" aria-hidden="true" class="header-anchor">#</a> 设置开机启动</h4> <ol><li>centos :<div class="language-bash extra-class"><pre class="language-bash"><code>    $ systemctl <span class="token function">enable</span> mysqld
+    $ systemctl daemon-reload
+</code></pre></div></li></ol> <h4 id="查看mysql-root初始密码并修改"><a href="#查看mysql-root初始密码并修改" aria-hidden="true" class="header-anchor">#</a> 查看mysql root初始密码并修改</h4> <ol><li><p>mysql安装完成后,在<code>/var/log/mysqld.log</code>文件中生成了临时密码</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cat</span> /var/log/mysqld.log
+</code></pre></div></li> <li><p>进入mysql命令行</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ mysql -u root -p
+</code></pre></div></li> <li><p>修改密码</p> <div class="language-bash extra-class"><pre class="language-bash"><code>mysql<span class="token operator">&gt;</span> ALTER USER <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED BY <span class="token string">'newpassword'</span><span class="token punctuation">;</span>
+Query OK, 0 rows affected <span class="token punctuation">(</span>0.00 sec<span class="token punctuation">)</span>
+</code></pre></div><p>ps: mysql5.7默认密码策略要求密码必须是大小写字母数字特殊字母的组合，至少8位</p></li></ol> <h4 id="设置mysql允许远程登录"><a href="#设置mysql允许远程登录" aria-hidden="true" class="header-anchor">#</a> 设置mysql允许远程登录</h4> <ol><li>进入mysql命令行<div class="language-bash extra-class"><pre class="language-bash"><code>mysql<span class="token operator">&gt;</span> GRANT ALL PRIVILEGES ON *.* TO <span class="token string">'root'</span>@<span class="token string">'%'</span> IDENTIFIED BY <span class="token string">'password'</span> WITH GRANT OPTION<span class="token punctuation">;</span>
+Query OK, 0 rows affected, 1 warning <span class="token punctuation">(</span>0.01 sec<span class="token punctuation">)</span>
+</code></pre></div>ps: 防火墙开放3306端口<div class="language-bash extra-class"><pre class="language-bash"><code>$ firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span>3306/tcp --permanent
+$ firewall-cmd --reload
+</code></pre></div></li></ol> <h4 id="设置mysql默认编码为utf8"><a href="#设置mysql默认编码为utf8" aria-hidden="true" class="header-anchor">#</a> 设置mysql默认编码为utf8</h4> <ol><li><p>修改<code>/etc/my.cnf</code>配置文件，在[mysqld]下添加编码配置</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">vi</span> /etc/my.cnf
+
+<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
+character_set_server<span class="token operator">=</span>utf8
+init_connect<span class="token operator">=</span><span class="token string">'SET NAMES utf8'</span>
+</code></pre></div></li> <li><p>重启mysql服务</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ systemctl restart mysqld
+</code></pre></div></li> <li><p>查看编码是否修改成功</p> <div class="language-bash extra-class"><pre class="language-bash"><code>mysql<span class="token operator">&gt;</span> show variables like <span class="token string">'%character%'</span><span class="token punctuation">;</span>
+</code></pre></div></li></ol> <h4 id="设置mysql忽略表名大小写"><a href="#设置mysql忽略表名大小写" aria-hidden="true" class="header-anchor">#</a> 设置mysql忽略表名大小写</h4> <ol><li><p>修改<code>/etc/my.cnf</code>配置文件，在[mysqld]下添加配置</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">vi</span> /etc/my.cnf
+
+<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
+lower_case_table_names<span class="token operator">=</span>1
+</code></pre></div></li> <li><p>如果不清楚my.cnf配置文件位置,可以如下操作：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>//查看mysql的命令路径
+$ <span class="token function">which</span> mysqld 	
+/usr/sbin/mysqld
+
+//查看mysql读取的默认配置文件位置
+$ /usr/sbin/mysqld --verbose --help <span class="token operator">|</span> <span class="token function">grep</span> -A 1 <span class="token string">'Default options'</span> 
+Default options are <span class="token function">read</span> from the following files <span class="token keyword">in</span> the given order:
+/etc/my.cnf /etc/mysql/my.cnf /usr/etc/my.cnf ~/.my.cnf
+</code></pre></div><p>ps: 多个配置文件，前面的文件不存在才会读取后面的，编辑文件，如果发现是新文件，则编辑后面的文件</p></li> <li><p>重启mysql服务</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">service</span> mysqld restart
+</code></pre></div></li></ol> <h4 id="修改mysql-group-by限制"><a href="#修改mysql-group-by限制" aria-hidden="true" class="header-anchor">#</a> 修改mysql group by限制</h4> <ol><li><p>临时解决办法：</p> <ul><li><p>进入mysql命令行</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ mysql -uroot -p
+
+<span class="token keyword">set</span> session sql_mode<span class="token operator">=</span><span class="token string">'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'</span><span class="token punctuation">;</span>
+
+SET GLOBAL sql_mode<span class="token operator">=</span><span class="token punctuation">(</span>SELECT REPLACE<span class="token punctuation">(</span>@@sql_mode,<span class="token string">'ONLY_FULL_GROUP_BY'</span>,<span class="token string">''</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li> <li><p>永久解决办法：</p> <ul><li><p>修改<code>/etc/my.cnf</code>配置文件，在[mysqld]下添加配置</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">vi</span> /etc/my.cnf
+
+<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
+sql_mode<span class="token operator">=</span>STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+</code></pre></div></li> <li><p>重启mysql服务</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">service</span> mysqld restart
+</code></pre></div></li></ul></li></ol> <h3 id="centos7-3安装tomcat8"><a href="#centos7-3安装tomcat8" aria-hidden="true" class="header-anchor">#</a> centos7.3安装tomcat8</h3> <ol><li><p>下载tomcat <a href="http://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener noreferrer">官方下载地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">wget</span> http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz
+</code></pre></div></li> <li><p>解压</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">tar</span> -zxvf apache-tomcat-8.5.47.tar.gz 
+</code></pre></div><p>ps：防火墙开放端口</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span>80/tcp --permanent
+$ firewall-cmd --reload
+</code></pre></div></li></ol> <h3 id="centos7-3安装redis4"><a href="#centos7-3安装redis4" aria-hidden="true" class="header-anchor">#</a> centos7.3安装redis4</h3> <ol><li><p>下载redis安装包</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">wget</span> http://download.redis.io/releases/redis-4.0.6.tar.gz
+</code></pre></div></li> <li><p>解压</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">tar</span> -zxvf redis-4.0.6.tar.gz
+</code></pre></div></li> <li><p>yum安装gcc依赖</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ yum <span class="token function">install</span> gcc
+</code></pre></div></li> <li><p>跳转到redis解压目录下编译安装</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cd</span> redis-4.0.6
+$ <span class="token function">make</span> MALLOC<span class="token operator">=</span>libc　
+
+<span class="token comment">#将redis-4.0.6/src目录下的文件加到/usr/local/bin目录</span>
+$ <span class="token function">cd</span> src <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre></div></li> <li><p>启动redis</p> <ul><li><p>按需修改redis.conf文件<br> <code>protected-mode no</code> 改为 <code>protected-mode yes</code><br> <code>bind 127.0.0.1</code> 注释掉，或者改为<code>bind 0.0.0.0</code><br>
+​	ps: 防火墙开放端口</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span>6379/tcp --permanent
+$ firewall-cmd --reload
+</code></pre></div></li> <li><p>切换到redis的src目录下直接启动</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cd</span> src
+$ ./redis-server
+</code></pre></div></li> <li><p>后台进程启动</p></li> <li><p>修改redis.conf文件
+​	<code>daemonize no</code>改为 `daemonize yes</p></li> <li><p>指定redis.conf文件启动</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ ./redis-server /home/redis-4.0.6/redis.conf
+</code></pre></div></li></ul></li> <li><p>设置redis开机自启动  <a href="https://www.cnblogs.com/zuidongfeng/p/8032505.html" target="_blank" rel="noopener noreferrer">参考资料<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ul><li><p>在/etc目录下新建redis目录</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">mkdir</span> /etc/redis
+</code></pre></div></li> <li><p>将<code>redis.conf</code>文件复制一份到<code>/etc/redis</code>目录下，并命名为<code>6379.conf</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cp</span> /home/redis-4.0.6/redis.conf /etc/redis/6379.conf
+</code></pre></div></li> <li><p>将redis的启动脚本复制一份放到<code>/etc/init.d</code>目录下，命名为<code>redisd</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cp</span> /home/redis-4.0.6/utils/redis_init_script /etc/init.d/redisd
+</code></pre></div></li> <li><p>设置redis开机自启动</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cd</span> /etc/init.d
+$ <span class="token function">chkconfig</span> redisd on
+<span class="token function">service</span> redisd does not support <span class="token function">chkconfig</span>　
+</code></pre></div></li> <li><p>如果如上提示不支持chkconfig
+使用vim编辑redisd文件，在第一行<code>#!/bin/sh</code>之后加入如下两行注释，保存退出</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ vim /etc/init.d/redisd
+
+<span class="token comment">#!/bin/sh</span>
+<span class="token comment">#chkconfig:   2345 90 10</span>
+<span class="token comment">#description:  Redis is a persistent key-value database</span>
+</code></pre></div><p>ps: 注释的意思是，redis服务必须在运行级2，3，4，5下被启动或关闭，启动的优先级是90，关闭的优先级是10。</p></li> <li><p>再次执行开机自启命令即可</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">chkconfig</span> redisd on
+</code></pre></div><p>ps: 现在可以直接已服务的形式启动和关闭redis了<br>
+​	启动：<code>service redisd start</code><br>
+​    停止：<code>service redisd stop</code></p></li></ul></li></ol> <h3 id="centos7-3安装nginx"><a href="#centos7-3安装nginx" aria-hidden="true" class="header-anchor">#</a> centos7.3安装nginx</h3> <p>​	<a href="https://blog.csdn.net/qq_38591756/article/details/82829902" target="_blank" rel="noopener noreferrer">参考资料<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol><li><p>下载安装包和依赖</p> <p>SSL功能需要openssl库，下载地址：http://www.openssl.org/<br>
+gzip模块需要zlib库，下载地址：http://www.zlib.net/<br>
+rewrite模块需要pcre库，下载地址：http://www.pcre.org/<br>
+Nginx的安装包：下载地址为：http://nginx.org/en/download.html</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">wget</span> https://www.openssl.org/source/openssl-1.1.1.tar.gz
+$ <span class="token function">wget</span> http://www.zlib.net/zlib-1.2.11.tar.gz
+$ <span class="token function">wget</span> https://ftp.pcre.org/pub/pcre/pcre-8.33.tar.gz
+$ <span class="token function">wget</span> http://nginx.org/download/nginx-1.14.0.tar.gz
+</code></pre></div></li> <li><p>解压</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">tar</span> zxvf openssl-1.1.1.tar.gz
+$ <span class="token function">tar</span> zxvf zlib-1.2.11.tar.gz
+$ <span class="token function">tar</span> zxvf pcre-8.33.tar.gz
+$ <span class="token function">tar</span> zxvf nginx-1.14.0.tar.gz
+</code></pre></div></li> <li><p>安装依赖</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#新环境需要安装gcc gcc-c++ make</span>
+$ yum <span class="token function">install</span> -y gcc gcc-c++ <span class="token function">make</span>
+
+<span class="token comment">#安装PCRE库</span>
+$ <span class="token function">cd</span> pcre-8.33
+$ ./configure
+$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token comment">#安装SSL库</span>
+$ <span class="token function">cd</span> openssl-1.1.1
+$ ./config
+$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token comment">#安装zlib库</span>
+$ <span class="token function">cd</span> zlib-1.2.11
+$ ./configure
+$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre></div></li> <li><p>安装nginx</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cd</span> nginx-1.14.0
+
+$ ./configure --user<span class="token operator">=</span>nobody --group<span class="token operator">=</span>nobody --prefix<span class="token operator">=</span>/usr/local/nginx --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module --with-http_sub_module --with-http_ssl_module --with-pcre<span class="token operator">=</span>/home/nginx/pcre-8.33 --with-zlib<span class="token operator">=</span>/home/nginx/zlib-1.2.11 --with-openssl<span class="token operator">=</span>/home/nginx/openssl-1.1.1
+
+$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre></div><p>ps: 如果默认没有创建logs目录，则需要手动创建，否则会报错</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">mkdir</span> /usr/local/nginx/logs
+</code></pre></div></li> <li><p>配置开机启动</p> <ul><li><p>切换到<code>/lib/systemd/system</code>目录,创建<code>nginx.service</code>文件，内容如下：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cd</span> /lib/systemd/system
+
+$ vim nginx.service
+
+<span class="token punctuation">[</span>Unit<span class="token punctuation">]</span>
+Description<span class="token operator">=</span>nginx
+After<span class="token operator">=</span>network.target
+
+<span class="token punctuation">[</span>Service<span class="token punctuation">]</span>
+Type<span class="token operator">=</span>forking
+ExecStart<span class="token operator">=</span>/usr/local/nginx/sbin/nginx
+ExecReload<span class="token operator">=</span>/usr/local/nginx/sbin/nginx reload
+ExecStop<span class="token operator">=</span>/usr/local/nginx/sbin/nginx quit
+PrivateTmp<span class="token operator">=</span>true
+ 
+<span class="token punctuation">[</span>Install<span class="token punctuation">]</span>
+WantedBy<span class="token operator">=</span>multi-user.target
+</code></pre></div></li> <li><p>保存并退出，使用下面命令设置开机启动</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ systemctl <span class="token function">enable</span> nginx.service
+</code></pre></div><p>ps: <code>/usr/local/nginx/conf/nginx.conf</code>文件是nginx默认的配置文件，对其修改即可</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ systemctl start nginx.service  <span class="token comment">#启动，也可以使用sbin/nginx启动</span>
+$ systemctl stop nginx.service  <span class="token comment">#结束nginx </span>
+$ systemctl restart nginx.service  <span class="token comment">#重启，可使用sbin/nginx -s reload</span>
+</code></pre></div></li></ul></li></ol></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间: </span> <span class="time">11/27/2019, 10:03:25 AM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/version-control/git-advanced.html" class="prev">
+        Git进阶
+      </a></span> <!----></p></div>  <div id="gitalk-container" class="content default"></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/4.50c27472.js" defer></script><script src="/assets/js/0.7d54da41.js" defer></script><script src="/assets/js/27.025b8a9c.js" defer></script><script src="/assets/js/app.f683b4c6.js" defer></script>
+  </body>
+</html>
